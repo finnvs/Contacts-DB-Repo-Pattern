@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts_DB_WPF_UI", "Contacts_DB_WPF_UI\Contacts_DB_WPF_UI.csproj", "{A4CB7DDF-C6CB-4A7D-B19C-55198F570C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts_DB_WPF_UI", "Contacts_DB_WPF_UI\Contacts_DB_WPF_UI.csproj", "{A4CB7DDF-C6CB-4A7D-B19C-55198F570C38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsDB.Domain", "ContactsDB.Domain\ContactsDB.Domain.csproj", "{723BBA2D-0444-4E1E-87BD-61BB4B79CBDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsDB.Domain", "ContactsDB.Domain\ContactsDB.Domain.csproj", "{723BBA2D-0444-4E1E-87BD-61BB4B79CBDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsDB.Infrastructure", "ContactsDB.Infrastructure\ContactsDB.Infrastructure.csproj", "{110D8C05-7CE1-4BD8-B950-DB012A41D024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsDB.Infrastructure", "ContactsDB.Infrastructure\ContactsDB.Infrastructure.csproj", "{110D8C05-7CE1-4BD8-B950-DB012A41D024}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
