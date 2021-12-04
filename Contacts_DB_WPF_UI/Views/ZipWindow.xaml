@@ -1,0 +1,36 @@
+﻿<Window x:Class="Contacts_DB_WPF_UI.Views.ZipWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contacts_DB_WPF_UI.Views"
+        mc:Ignorable="d"
+        Title="ZipWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="64"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Zipcode" VerticalAlignment="Center"/>
+        <TextBlock Text="City name" Grid.Row="1" VerticalAlignment="Center"/>
+        <TextBox Name="txtCode" Grid.Column="1" Width="80" HorizontalAlignment="Left" Margin="5" Text="{Binding Path=Code}"/>
+        <TextBox Name="txtCity" Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding Path=City}"/>
+        <Button Name="cmdSeek" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="70" Content="Select" Margin="5,20,5,20" Command="{Binding Path=SelectCommand}" />
+        <Button Name="cmdAdd" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="70" Content="Insert" Margin="5,20,85,20" Command="{Binding Path=InsertCommand}" />
+        <Button Name="cmdUpdate" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="70" Content="Update" Margin="5,20,165,20" Command="{Binding Path=UpdateCommand}" />
+        <Button Name="cmdRemove" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="70" Content="Delete" Margin="5,20,245,20" Command="{Binding Path=RemoveCommand}" />
+        <Button Name="cmdClear" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="70" Content="Clear" Margin="5,20,325,20" Command="{Binding Path=ClearCommand}" />
+        <DataGrid Name="grid" Grid.Row="3" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single" SelectedItem="{Binding SelectedModel, Mode=TwoWay}" ItemsSource="{Binding Data}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Code" Width="80" Binding="{Binding Code}" />
+                <DataGridTextColumn Header="City name" Width="*" Binding="{Binding City}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
